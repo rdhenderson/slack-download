@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-// app.get('/', (req, res) => {
-//   res.sendFile(`${__dirname}/public/index.html`);
-// });
+app.get('/', (req, res) => {
+  res.send("Hello slack");
+});
 
 app.listen(PORT, () => {
   console.log('App running on port', PORT);
